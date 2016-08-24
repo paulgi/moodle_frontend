@@ -7,6 +7,9 @@ drawLogo("https://keats.kcl.ac.uk/pluginfile.php/2038040/mod_resource/content/3/
 // enter the string you want it to contain and then the location of the image to replace with.
 replaceFileIcons("hank","https://keats.kcl.ac.uk/pluginfile.php/2038040/mod_resource/content/3/hank.png");
 
+// Load external CSS file into Keats.
+loadCSS("https://keats.kcl.ac.uk/pluginfile.php/2040933/mod_resource/content/3/stdtheme.css");
+
 
 
 $("#page-header").css("background", "red");
@@ -16,9 +19,7 @@ $(".navbar").append("<div class='my-first-div'>Welcome to King's Online.</div>")
 
 function replaceFileIcons(name, location) {
 	$(".activityinstance").each(function(index, value){
-		console.log(value);
-		// console.log($(this).$(".instancename").val());
-		console.log(index);
+
 		var instanceName = $(value).eq(0).text();
 		console.log(instanceName);
 		console.log("does it contain hank?", instanceName.indexOf(name) !== -1);
@@ -31,7 +32,6 @@ function replaceFileIcons(name, location) {
 	});
 }
 
-
 function drawLogo(location) {
 	console.log('drawing hank in logo');
 	var logo = $(".logo").children();
@@ -39,12 +39,13 @@ function drawLogo(location) {
 	logo.css("width", 50).css("height", 50);
 }
 
-$("head").append("<link>");
-var css = $("head").children(":last");
-css.attr({
-      rel:  "stylesheet",
-      type: "text/css",
-   href: "https://keats.kcl.ac.uk/pluginfile.php/2040933/mod_resource/content/2/stdtheme.css"
-});
-
+function loadCSS(location){
+		$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+	      rel:  "stylesheet",
+	      type: "text/css",
+	   href: location
+	});
+}
 </script>
