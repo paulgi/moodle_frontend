@@ -39,4 +39,12 @@ function drawLogo(location) {
 	logo.css("width", 50).css("height", 50);
 }
 
+$("head").append("<link>");
+var css = $("head").children(":last");
+css.attr({
+      rel:  "stylesheet",
+      type: "text/css",
+   href: "https://keats.kcl.ac.uk/pluginfile.php/2040933/mod_resource/content/2/stdtheme.css"
+});
+
 </script>
