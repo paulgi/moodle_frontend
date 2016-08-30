@@ -17,6 +17,9 @@
 
 	updateHeader();
 
+	// run at start to ensure all accordions are consistently closed
+	closeOtherAccordions(this);
+
 	// used to close other accordions
     $(document).on('click', 'li.main', function(){ closeOtherAccordions(this); });
 
@@ -31,11 +34,11 @@ function replaceFileIcons(name, location) {
 }
 
 function closeOtherAccordions(context){
-	var current = context;
+	console.log(context);
 	$('li.main').each(function(index) {
-		if(this != current) {
-			console.log($('.sectionopen'));
-			$('.sectionopen').addClass('.sectionclosed').removeClass('sectionopen');
+		if(this != context) {
+			$('.sectionopen').addClass('sectionclosed').removeClass('sectionopen');
+			$('.toggle_open').addClass('toggle_closed').removeClass('toggle_open');
 		}
 	});
 }
