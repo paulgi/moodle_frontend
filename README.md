@@ -8,4 +8,10 @@ is the code that will be embeded into the webpage. It contains functions that wi
 ##std-theme.css
 Is loaded in externally and is used to style up the classes that you applied in Javascript.
 
+
 This decision was made to make the code alot more readable and to ensure modularity so that we can load in specific functions as needed.
+
+##lightbox.html
+This code should be embeded in a seperate HTML block.
+
+
