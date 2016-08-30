@@ -15,23 +15,27 @@
 
 	updateHeader();
 
+	fancyLightbox();
+
 
 function replaceFileIcons(name, location) {
 	$(".activityinstance").each(function(index, value){
-
 		var instanceName = $(value).eq(0).text();
-		console.log(instanceName);
-		console.log("does it contain hank?", instanceName.indexOf(name) !== -1);
 		if(instanceName.indexOf("Hank") !== -1){
 			console.log("Adding hank");
 			var iconImage = $(this).find("img");
-			console.log(iconImage);
 			$(iconImage.first().attr("src",location));
 		}
 	});
 }
 
-function UpdateHeader() {
+function fancyLightbox(){
+	console.log("hello");
+	console.log($('aside.span3:last-child'));
+	$('aside.span3:last-child').append('hello world');
+}
+
+function updateHeader() {
 	$("#page-header").css("background", "red");
 
 	$(".navbar").append("<div class='my-first-div'>Welcome to King's Online.</div>");	
