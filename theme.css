@@ -22,6 +22,10 @@ main {
   font-family: 'kingsfont';
 }
 
+.iconlarge {
+	width: 50px;
+}
+
 .hero {
   text-align: center;
   position: relative;
