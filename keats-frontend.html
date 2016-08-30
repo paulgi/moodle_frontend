@@ -29,7 +29,7 @@
 function replaceFileIcons(name, location) {
 	$(".activityinstance").each(function(index, value){
 		var instanceName = $(value).eq(0).text();
-		if(instanceName.indexOf("Hank") !== -1){
+		if(instanceName.indexOf(name) !== -1){
 			var iconImage = $(this).find("img");
 			$(iconImage.first().attr("src",location));
 		}
