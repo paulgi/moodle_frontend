@@ -2,9 +2,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://iddkingsonline.com/fancyapps/source/jquery.fancybox.js?v=2.1.5"></script>
 <script>
-	// Load external CSS file into Keats.
-	loadCSS("https://cdn.rawgit.com/simondate/moodle_frontend/master/theme.css");
-
+	// PRODUCTION
+	// loadCSS("https://cdn.rawgit.com/simondate/moodle_frontend/master/theme.css"); 
+	// DEVELOPMENT
+		loadCSS("https://rawgit.com/simondate/moodle_frontend/master/theme.css"); 
 	console.log(head.browser.chrome);
 
 	// enter the location of what you want to replace the logo with3
