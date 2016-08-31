@@ -3,22 +3,18 @@
 <script type="text/javascript" src="https://iddkingsonline.com/fancyapps/source/jquery.fancybox.js?v=2.1.5"></script>
 <script>
 	// PRODUCTION
-// loadCSS("https://cdn.rawgit.com/simondate/moodle_frontend/master/theme.css"); 
+	// loadCSS("https://cdn.rawgit.com/simondate/moodle_frontend/master/theme.css"); 
 	// DEVELOPMENT
-	loadCSS("https://rawgit.com/simondate/moodle_frontend/master/theme.css"); 
-	
+	loadCSS("https://rawgit.com/simondate/moodle_frontend/master/instances/janek_sandbox/theme.css"); 
 
-	// look into 'browser' documentation to understand what is possible with this.
-	console.log(head.browser.chrome);
-
-	// enter the location of what you want to replace the logo with3
+	// enter the location of what you want to replace the logo with
 	drawLogo("https://keats.kcl.ac.uk/pluginfile.php/2038040/mod_resource/content/3/hank.png");
 
 	// enter the string you want it to contain and then the location of the image to replace with.
-	replaceFileIcons("hank","https://keats.kcl.ac.uk/pluginfile.php/2038040/mod_resource/content/3/hank.png");
-	replaceFileIcons("lesson", "https://rawgit.com/simondate/moodle_frontend/master/icons/iLesson.png");
+	// replaceFileIcons("hank","https://keats.kcl.ac.uk/pluginfile.php/2038040/mod_resource/content/3/hank.png");
+	// replaceFileIcons("lesson", "https://rawgit.com/simondate/moodle_frontend/master/icons/iLesson.png");
 
-	updateHeader();
+	browserType();
 
 	// run at start to ensure all accordions are consistently closed. Comment out both lines to remove
 	closeOtherAccordions(this);
@@ -45,8 +41,8 @@ function closeOtherAccordions(context){
 	});
 }
 
-function updateHeader() {
-	$("#page-header").css("background", "red");	
+function browserType() {
+	console.log(head.browser.chrome);
 }
 
 function drawLogo(location) {
